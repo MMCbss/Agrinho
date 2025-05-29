@@ -3,115 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DroneFarm - Controle de Irrigação</title>
+    <title>Painel de Controle Drone Irrigador</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-dark text-light min-h-screen flex flex-col">
-    <header class="bg-gray-800 p-4 shadow-lg rounded-b-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-white">D…s="flex items-center space-x-4">
-                <span class="text-lg">Olá, Fazendeiro!</span>
-                <svg xmlns="http://www.w3.org/200gu0/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
+<body>
+    <header>
+        <div class="container">
+            <h1>Controle Agrícola Inteligente</h1>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#drones">Drones</a></li>
+                    <li><a href="#historico">Histórico</a></li>
+                    <li><a href="#configuracoes">Configurações</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container mx-auto p-6 flex-grow grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-        <div class="lg:col-span-1 space-y-6">
-            <section class="bg-gray-700 p-6 rounded-xl shadow-md">
-                <h2 class="text-2xl font-semibold mb-4 text-white">Status dos Drones</h2>
-                <div class="space-y-4">
-                    <div class="bg-gray-600 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div>
-                            <h3 class="text-xl font-medium text-white">Drone Alpha</h3>
-                            <p class="text-sm text-secondary">Online - Irrigando</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-sm">Bateria: <span class="font-bold text-secondary">85%</span></p>
-                            <p class="text-sm">Água: <span class="font-bold text-secondary">70%</span></p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-600 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div>
-                            <h3 class="text-xl font-medium text-white">Drone Beta</h3>
-                            <p class="text-sm text-accent">Offline - Carregando</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-sm">Bateria: <span class="font-bold text-accent">45%</span></p>
-                            <p class="text-sm">Água: <span class="font-bold text-gray-400">N/A</span></p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-600 p-4 rounded-lg flex items-center justify-between shadow-sm">
-                        <div>
-                            <h3 class="text-xl font-medium text-white">Drone Gamma</h3>
-                            <p class="text-sm text-red-400">Erro - Manutenção</p>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-sm">Bateria: <span class="font-bold text-red-400">10%</span></p>
-                            <p class="text-sm">Água: <span class="font-bold text-gray-400">N/A</span></p>
-                        </div>
-                    </div>
+    <main class="container">
+        <section id="dashboard" class="card">
+            <h2>Dashboard de Operações</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>Status do Drone</h3>
+                    <p class="status-online">Online</p>
                 </div>
-            </section>
-
-            <section class="bg-gray-700 p-6 rounded-xl shadow-md">
-                <h2 class="text-2xl font-semibold mb-4 text-white">Atividade Recente</h2>
-                <ul class="space-y-2">
-                    <li class="bg-gray-600 p-3 rounded-lg text-sm">
-                        <span class="text-secondary">[10:30]</span> Drone Alpha iniciou irrigação no Setor C.
-                    </li>
-                    <li class="bg-gray-600 p-3 rounded-lg text-sm">
-                        <span class="text-accent">[10:25]</span> Drone Beta retornou para base para recarga.
-                    </li>
-                    <li class="bg-gray-600 p-3 rounded-lg text-sm">
-                        <span class="text-red-400">[10:15]</span> Erro detectado no Drone Gamma.
-                    </li>
-                    <li class="bg-gray-600 p-3 rounded-lg text-sm">
-                        <span class="text-secondary">[10:00]</span> Irrigação agendada para 11:00 AM.
-                    </li>
-                </ul>
-            </section>
-        </div>
-
-        <div class="lg:col-span-2 space-y-6">
-            <section class="bg-gray-700 p-6 rounded-xl shadow-md h-96 flex items-center justify-center">
-                <h2 class="text-2xl font-semibold text-white absolute top-8 left-8">Visualização do Mapa</h2>
-                <div class="w-full h-full bg-gray-600 rounded-lg flex items-center justify-center text-gray-400 text-xl relative">
-                    [Image of a farm map with drone icons]
+                <div class="stat-item">
+                    <h3>Nível de Água</h3>
+                    <p>85%</p>
                 </div>
-            </section>
-
-            <section class="bg-gray-700 p-6 rounded-xl shadow-md">
-                <h2 class="text-2xl font-semibold mb-4 text-white">Painel de Controle</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <button class="bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                        Iniciar Todos os Drones
-                    </button>
-                    <button class="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                        Retornar à Base
-                    </button>
-                    <button class="bg-secondary hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                        Agendar Irrigação
-                    </button>
-                    <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                        Ver Relatórios
-                    </button>
-                    <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                        Configurações
-                    </button>
-                    <button class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out">
-                        Parada de Emergência
-                    </button>
+                <div class="stat-item">
+                    <h3>Área Irrigada Hoje</h3>
+                    <p>12 Hectares</p>
                 </div>
-            </section>
-        </div>
+                <div class="stat-item">
+                    <h3>Próxima Missão</h3>
+                    <p>Milho - Setor C (14:00)</p>
+                </div>
+            </div>
+            <div class="map-placeholder">
+                <p>Mapa da Fazenda e Rota do Drone</p>
+                <img src="https://via.placeholder.com/600x300?text=Mapa+da+Fazenda" alt="Mapa da Fazenda">
+            </div>
+            <div class="controls">
+                <button class="btn primary">Iniciar Irrigação</button>
+                <button class="btn secondary">Retornar à Base</button>
+                <button class="btn danger">Emergência</button>
+            </div>
+        </section>
+
+        <section id="drones" class="card">
+            <h2>Drones Disponíveis</h2>
+            <div class="drone-list">
+                <div class="drone-item">
+                    <h3>Drone Alpha 1</h3>
+                    <p>Bateria: 92%</p>
+                    <p>Localização: Campo Leste</p>
+                    <span class="status-indicator active"></span>
+                </div>
+                <div class="drone-item">
+                    <h3>Drone Beta 2</h3>
+                    <p>Bateria: 78%</p>
+                    <p>Localização: Base</p>
+                    <span class="status-indicator standby"></span>
+                </div>
+                <div class="drone-item">
+                    <h3>Drone Gamma 3</h3>
+                    <p>Bateria: 15%</p>
+                    <p>Localização: Carregando</p>
+                    <span class="status-indicator charging"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="historico" class="card">
+            <h2>Histórico de Missões</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID da Missão</th>
+                        <th>Drone</th>
+                        <th>Área</th>
+                        <th>Duração</th>
+                        <th>Data</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#00123</td>
+                        <td>Alpha 1</td>
+                        <td>Setor A</td>
+                        <td>45 min</td>
+                        <td>28/05/2025</td>
+                        <td>Concluída</td>
+                    </tr>
+                    <tr>
+                        <td>#00122</td>
+                        <td>Beta 2</td>
+                        <td>Setor B</td>
+                        <td>30 min</td>
+                        <td>27/05/2025</td>
+                        <td>Concluída</td>
+                    </tr>
+                    <tr>
+                        <td>#00121</td>
+                        <td>Gamma 3</td>
+                        <td>Setor C</td>
+                        <td>60 min</td>
+                        <td>26/05/2025</td>
+                        <td>Concluída</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="configuracoes" class="card">
+            <h2>Configurações</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nomeFazenda">Nome da Fazenda:</label>
+                    <input type="text" id="nomeFazenda" value="Fazenda Esperança">
+                </div>
+                <div class="form-group">
+                    <label for="taxaIrrigacao">Taxa de Irrigação Padrão (L/ha):</label>
+                    <input type="number" id="taxaIrrigacao" value="150">
+                </div>
+                <div class="form-group">
+                    <label for="notificacoes">Receber Notificações:</label>
+                    <input type="checkbox" id="notificacoes" checked>
+                </div>
+                <button type="submit" class="btn primary">Salvar Configurações</button>
+            </form>
+        </section>
     </main>
 
-    <footer class="bg-gray-800 p-4 text-center text-gray-400 rounded-t-lg mt-6">
-        <p>&copy; 2025 DroneFarm. Todos os direitos reservados.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Controle Agrícola Inteligente. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
