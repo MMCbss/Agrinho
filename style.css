@@ -1,0 +1,35 @@
+/* Este arquivo contém apenas CSS puro.
+   A configuração do Tailwind CSS (que é JavaScript) foi removida.
+   Para que as classes do Tailwind no HTML funcionem, você precisaria
+   de um processo de build para gerar um CSS final a partir delas. */
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Adicione aqui qualquer estilo CSS que você queira aplicar diretamente,
+       já que as classes do Tailwind não serão interpretadas. */
+    background-color: #1F2937; /* Cor de fundo "dark" */
+    color: #F9FAFB; /* Cor de texto "light" */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Exemplo de como você teria que estilizar elementos manualmente */
+.container {
+    max-width: 1280px; /* Equivalente a mx-auto e container do Tailwind */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* Equivalente a p-6 */
+    padding-right: 1.5rem;
+}
+
+header {
+    background-color: #1F2937; /* Cor similar a gray-800 */
+    padding: 1rem; /* p-4 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+    border-bottom-left-radius: 0.5rem; /* rounded-b-lg */
+    border-bottom-right-radius: 0.5rem;
+}
+
+/* ... e assim por diante para todas as classes Tailwind usadas no HTML ... */
+/* Isso demonstra a complexidade de remover o Tailwind e reestilizar tudo manualmente */
